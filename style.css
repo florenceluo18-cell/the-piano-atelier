@@ -1,0 +1,1732 @@
+body {
+  background-color: #f7f0e8;
+  font-family: Georgia, serif;
+  color: #403747;
+  margin: 0;
+  padding: 30px 15px;
+}
+
+.website {
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+  background: #fffdf9;
+  padding: 40px 25px;
+  border-radius: 18px;
+}
+
+.small-title {
+  letter-spacing: 4px;
+  color: #89769e;
+  font-size: 11px;
+}
+
+h1 {
+  font-size: 42px;
+  color: #536b8b;
+  font-weight: normal;
+}
+
+.subtitle {
+  line-height: 1.8;
+  color: #777078;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e7dce9;
+  margin: 30px 0;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.card {
+  background: #f0eaf3;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 25px;
+}
+
+.card p {
+  color: #777078;
+}
+
+
+.timer {
+  background: #e9e2ef;
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+#clock {
+  font-size: 48px;
+  font-family: monospace;
+  color: #75608c;
+  margin: 15px 0;
+}
+
+.timer button {
+  margin: 5px;
+}
+
+#timer-message {
+  font-size: 13px;
+  color: #75608c;
+}
+
+/* PRACTICE CALENDAR */
+
+.calendar-section {
+  background: #fffdf9;
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid #e8e0d5;
+  border-radius: 18px;
+}
+
+.calendar-section > p {
+  color: #756d78;
+}
+
+.calendar {
+  background: #f7f2eb;
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 25px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+
+.calendar-header button {
+  padding: 8px 13px;
+  font-size: 18px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.calendar-weekdays {
+  text-align: center;
+  font-size: 11px;
+  color: #756d78;
+  margin-bottom: 8px;
+}
+
+.calendar-day {
+  min-width: 0;
+  aspect-ratio: 1;
+  padding: 0;
+  border-radius: 9px;
+  background: #fffdf9;
+  color: #403747;
+  font-size: 13px;
+}
+
+.calendar-day:hover {
+  outline: 2px solid #b7a5ca;
+}
+
+.calendar-day.is-selected {
+  outline: 2px solid #75608c;
+  font-weight: bold;
+}
+
+.calendar-day.is-practised {
+  background: #dfe5d9;
+  color: #344d35;
+}
+
+.calendar-day.is-today {
+  border: 1px solid #75608c;
+}
+
+.calendar-day.is-selected.is-practised {
+  background: #cbd9c6;
+}
+
+.calendar-empty {
+  aspect-ratio: 1;
+}
+
+.selected-day {
+  background: #f0eaf3;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+
+.selected-day h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.selected-day p {
+  font-size: 13px;
+}
+
+#calendar-summary {
+  color: #75608c;
+  font-weight: bold;
+  margin-top: 22px;
+}
+
+#clear-practice {
+  background: #e8e0e5;
+  color: #403747;
+}
+
+.save-note {
+  font-size: 11px;
+}
+
+@media (max-width: 450px) {
+  .calendar-section {
+    padding: 18px;
+  }
+
+  .calendar {
+    padding: 10px;
+  }
+
+  .calendar-grid {
+    gap: 3px;
+  }
+
+  .calendar-day {
+    font-size: 11px;
+  }
+}
+
+/* PRACTICE STREAK CARD */
+
+.streak-card {
+  background: linear-gradient(135deg, #eee5f4, #faf2e8);
+  border: 1px solid #e3d7e9;
+  border-radius: 18px;
+  padding: 25px;
+  margin: 22px 0;
+  text-align: center;
+}
+
+.streak-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #75608c;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+}
+
+.streak-number span:first-child {
+  font-size: 35px;
+}
+
+#streak-heading {
+  margin: 5px 0;
+  font-size: 23px;
+}
+
+#streak-message {
+  color: #756d78;
+  font-size: 13px;
+}
+
+.longest-streak {
+  display: inline-block;
+  background: #fffdf9;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 12px;
+  color: #75608c;
+}
+
+/* REPERTOIRE PROGRESS TRACKER */
+
+.progress-section {
+  background: #fffdf9;
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid #e8e0d5;
+  border-radius: 20px;
+}
+
+.progress-intro {
+  color: #756d78;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.progress-list {
+  display: grid;
+  gap: 18px;
+}
+
+.piece-progress {
+  background: #f7f2eb;
+  border: 1px solid #eee5da;
+  border-radius: 16px;
+  padding: 22px;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.piece-progress:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px #40374710;
+}
+
+.piece-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.piece-composer {
+  color: #8c78a5;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 0 0 7px;
+}
+
+.piece-progress h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.music-symbol {
+  color: #8c78a5;
+  font-size: 27px;
+}
+
+.piece-progress label {
+  display: block;
+  color: #756d78;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.piece-status {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d9cde2;
+  border-radius: 10px;
+  background: #fffdf9;
+  color: #403747;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.piece-status:focus {
+  outline: 2px solid #8c78a5;
+  outline-offset: 2px;
+}
+
+.piece-note {
+  color: #756d78;
+  font-size: 12px;
+  margin: 12px 0 0;
+}
+
+.progress-summary {
+  background: linear-gradient(135deg, #eee5f4, #faf2e8);
+  border: 1px solid #e3d7e9;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.progress-summary h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: normal;
+  margin: 12px 0;
+}
+
+.progress-track {
+  height: 9px;
+  background: #ffffffb0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 18px 0;
+}
+
+#progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #8c78a5;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+#progress-message {
+  color: #756d78;
+  font-size: 13px;
+}
+
+@media (max-width: 450px) {
+  .progress-section {
+    padding: 18px;
+  }
+
+  .piece-progress {
+    padding: 17px;
+  }
+
+  .piece-progress h3 {
+    font-size: 18px;
+  }
+}
+
+
+/* CUSTOMISABLE COMPOSER NAMES */
+
+.piece-composer-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3px 0;
+  margin: 0 0 7px;
+  border: none;
+  border-bottom: 1px dashed transparent;
+  border-radius: 0;
+  background: transparent;
+  color: #8c78a5;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.piece-composer-input:hover {
+  border-bottom-color: #cbbbd8;
+}
+
+.piece-composer-input:focus {
+  outline: 2px solid #b7a5ca;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* CUSTOMISABLE PIECE TITLES */
+
+.piece-title-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px dashed #cbbbd8;
+  border-radius: 0;
+  background: transparent;
+  color: #403747;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.piece-title-input:hover {
+  border-bottom-color: #8c78a5;
+}
+
+.piece-title-input:focus {
+  outline: 2px solid #b7a5ca;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* SMALL SCREEN ADJUSTMENTS */
+
+@media (max-width: 450px) {
+  .piece-title-input {
+    font-size: 18px;
+  }
+}
+
+
+/* FIX REPERTOIRE CARD LAYOUT */
+
+.piece-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.piece-top > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.piece-composer-input,
+.piece-title-input {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.music-symbol {
+  flex-shrink: 0;
+}
+
+
+/* ACHIEVEMENT WALL */
+
+.achievement-wall {
+  background: #fffdf9;
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid #e8e0d5;
+  border-radius: 20px;
+  color: #403747;
+}
+
+.achievement-eyebrow {
+  color: #8c78a5;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.achievement-wall > h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.achievement-intro {
+  color: #756d78;
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.achievement-form-card {
+  background: #f7f2eb;
+  border: 1px solid #eee5da;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.achievement-form-card h3,
+.achievement-ideas h3,
+.achievement-wall-heading h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 0 14px;
+}
+
+#achievement-form label {
+  display: block;
+  font-size: 12px;
+  color: #756d78;
+  margin: 15px 0 7px;
+}
+
+#achievement-form input,
+#achievement-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d9cde2;
+  border-radius: 10px;
+  background: #fffdf9;
+  color: #403747;
+  font: inherit;
+}
+
+#achievement-form input:focus,
+#achievement-form textarea:focus {
+  outline: 2px solid #b7a5ca;
+  outline-offset: 2px;
+}
+
+.achievement-add-button {
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #8c78a5;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.achievement-add-button:hover {
+  background: #75618f;
+}
+
+.achievement-ideas {
+  padding: 20px;
+  border-radius: 14px;
+  background: #f3edf7;
+  margin-bottom: 28px;
+}
+
+.achievement-ideas p,
+.achievement-wall-heading p {
+  color: #756d78;
+  font-size: 13px;
+}
+
+.achievement-ideas ul {
+  padding-left: 22px;
+  margin-bottom: 0;
+  line-height: 2;
+  font-size: 13px;
+}
+
+.achievement-wall-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.achievement-wall-heading h3 {
+  margin-bottom: 0;
+}
+
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.achievement-card {
+  background: #fffaf0;
+  border: 1px solid #e8d9b7;
+  border-radius: 14px;
+  padding: 18px;
+  overflow-wrap: anywhere;
+}
+
+.achievement-card-icon {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.achievement-card h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.achievement-card-date {
+  color: #8c78a5;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.achievement-card-note {
+  color: #756d78;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.achievement-delete-button {
+  margin-top: 12px;
+  padding: 7px 10px;
+  border: 1px solid #d9cde2;
+  border-radius: 8px;
+  background: transparent;
+  color: #756d78;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.achievement-delete-button:hover {
+  background: #f3edf7;
+}
+
+.achievement-empty {
+  color: #756d78;
+  text-align: center;
+  padding: 22px 10px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 450px) {
+  .achievement-wall {
+    padding: 18px;
+  }
+
+  .achievement-form-card {
+    padding: 16px;
+  }
+
+  .achievement-wall > h2 {
+    font-size: 24px;
+  }
+}
+
+/* MY MUSIC LIBRARY */
+
+.music-library {
+  background: #fffdf9;
+  color: #403747;
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid #e8e0d5;
+  border-radius: 20px;
+}
+
+.library-eyebrow {
+  color: #8c78a5;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.music-library > h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.library-intro {
+  color: #756d78;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.library-form-card {
+  background: #f7f2eb;
+  border: 1px solid #eee5da;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.library-form-card h3,
+.library-results-heading h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: normal;
+  margin: 0 0 16px;
+}
+
+#library-track-form label,
+.library-controls > label:not(.library-favourites-filter) {
+  display: block;
+  color: #756d78;
+  font-size: 12px;
+  margin: 15px 0 7px;
+}
+
+#library-track-form input,
+#library-track-form select,
+#library-track-form textarea,
+.library-controls input[type="search"],
+.library-controls select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d9cde2;
+  border-radius: 10px;
+  background: #fffdf9;
+  color: #403747;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+#library-track-form textarea {
+  resize: vertical;
+}
+
+#library-track-form input:focus,
+#library-track-form select:focus,
+#library-track-form textarea:focus,
+.library-controls input:focus,
+.library-controls select:focus {
+  outline: 2px solid #b7a5ca;
+  outline-offset: 2px;
+}
+
+.library-help {
+  color: #756d78;
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 6px 0 12px;
+}
+
+.library-form-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.library-form-buttons button {
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #8c78a5;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.library-form-buttons button:hover {
+  background: #75618f;
+}
+
+.library-form-buttons #library-cancel {
+  background: #e8e0ed;
+  color: #403747;
+}
+
+#library-form-message {
+  color: #756d78;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.library-controls {
+  background: #f3edf7;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
+
+.library-favourites-filter {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #403747;
+  font-size: 13px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.library-favourites-filter input {
+  accent-color: #8c78a5;
+  width: 16px;
+  height: 16px;
+}
+
+.library-results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.library-results-heading h3 {
+  margin-bottom: 0;
+}
+
+.library-results-heading p {
+  color: #756d78;
+  font-size: 12px;
+}
+
+.library-track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.library-track-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e8e0d5;
+  border-radius: 16px;
+  background: #fffaf5;
+}
+
+.library-cover {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background: #eee5f4;
+}
+
+.library-cover-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background: linear-gradient(135deg, #eee5f4, #faf2e8);
+  color: #8c78a5;
+  font-size: 44px;
+}
+
+.library-track-info {
+  padding: 16px;
+}
+
+.library-category-tag {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eee5f4;
+  color: #75618f;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.library-track-info h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 0 0 5px;
+  overflow-wrap: anywhere;
+}
+
+.library-track-artist {
+  color: #8c78a5;
+  font-size: 12px;
+  margin: 0 0 12px;
+}
+
+.library-track-description {
+  color: #756d78;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin-bottom: 14px;
+}
+
+.library-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  background: #e8e0ed;
+  margin: 12px 0;
+}
+
+.library-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.library-card-actions button {
+  padding: 8px 10px;
+  border: 1px solid #d9cde2;
+  border-radius: 8px;
+  background: #fffdf9;
+  color: #403747;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.library-card-actions button:hover {
+  background: #f3edf7;
+}
+
+.library-card-actions .library-favourite-button {
+  color: #75618f;
+}
+
+.library-empty {
+  color: #756d78;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 450px) {
+  .music-library {
+    padding: 18px;
+  }
+
+  .library-form-card,
+  .library-controls {
+    padding: 15px;
+  }
+
+  .music-library > h2 {
+    font-size: 24px;
+  }
+
+  .library-track-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* COMPACT MUSIC LIBRARY */
+
+.library-track-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.library-cover,
+.library-cover-placeholder {
+  display: none;
+}
+
+.library-track-info {
+  padding: 12px;
+}
+
+.library-track-info h4 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.library-track-artist {
+  margin-bottom: 8px;
+}
+
+.library-track-description {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.library-video {
+  aspect-ratio: 16 / 9;
+  margin: 8px 0;
+}
+
+.library-card-actions {
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.library-card-actions button {
+  padding: 7px 9px;
+  font-size: 11px;
+}
+
+@media (min-width: 800px) {
+  .library-track-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* CUSTOMISABLE REPERTOIRE */
+
+.repertoire-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.repertoire-list .piece-progress {
+  min-width: 0;
+}
+
+.add-repertoire {
+  margin: 24px 0;
+  padding: 22px;
+  background: #f7f2eb;
+  border: 1px solid #e8e0d5;
+  border-radius: 16px;
+}
+
+.add-repertoire h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+#add-repertoire-form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 12px;
+  color: #756d78;
+}
+
+#add-repertoire-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d9cde2;
+  border-radius: 9px;
+  background: #fffdf9;
+  color: #403747;
+  font: inherit;
+}
+
+#add-repertoire-form button {
+  margin-top: 18px;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #8c78a5;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+#add-repertoire-form button:hover {
+  background: #75618f;
+}
+
+.remove-piece-button {
+  margin-top: 12px;
+  padding: 8px 11px;
+  border: 1px solid #d9cde2;
+  border-radius: 8px;
+  background: #fffdf9;
+  color: #75618f;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#repertoire-form-message {
+  color: #756d78;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+  .repertoire-list {
+    grid-template-columns: 1fr;
+  }
+
+  .add-repertoire {
+    padding: 16px;
+  }
+}
+
+
+/* REPERTOIRE SEARCH */
+
+.repertoire-search {
+  margin: 18px 0;
+}
+
+.repertoire-search label {
+  display: block;
+  margin-bottom: 8px;
+  color: #756d78;
+  font-size: 13px;
+}
+
+#repertoire-search-input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 460px;
+  padding: 12px 14px;
+  border: 1px solid #d9cde2;
+  border-radius: 10px;
+  background: #fffdf9;
+  color: #403747;
+  font: inherit;
+  outline-offset: 3px;
+}
+
+#repertoire-search-input:focus {
+  border-color: #8c78a5;
+}
+
+#repertoire-search-count {
+  margin-top: 7px;
+  color: #756d78;
+  font-size: 12px;
+}
+
+/* WEEKLY PRACTICE PLANNER */
+
+.planner-section {
+  margin: 40px 0;
+  color: #403747;
+}
+
+.planner-section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+.planner-intro {
+  color: #756d78;
+  line-height: 1.6;
+}
+
+.planner-progress,
+.planner-form-card,
+.planner-day-card {
+  background: #fffdf9;
+  border: 1px solid #e8e0d5;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 18px 0;
+}
+
+.planner-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.planner-progress-heading strong {
+  color: #75618f;
+}
+
+.planner-progress-track {
+  height: 9px;
+  background: #eee7f5;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+#planner-progress-fill {
+  height: 100%;
+  width: 0;
+  background: #8c78a5;
+  border-radius: 20px;
+  transition: width 0.25s ease;
+}
+
+#planner-progress-message,
+#planner-form-message {
+  color: #756d78;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.planner-form-card h3,
+.planner-day-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+#planner-task-form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 12px;
+  color: #756d78;
+}
+
+#planner-task-form input,
+#planner-task-form select,
+#planner-task-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d9cde2;
+  border-radius: 9px;
+  background: #fff;
+  color: #403747;
+  font: inherit;
+}
+
+#planner-task-form textarea {
+  resize: vertical;
+}
+
+.planner-form-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+#planner-submit-button,
+#planner-cancel-button,
+.planner-task-button {
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 9px;
+  background: #8c78a5;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+#planner-cancel-button {
+  background: #eee7f5;
+  color: #59466f;
+}
+
+.planner-week {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+.planner-day-card {
+  margin: 0;
+  min-width: 0;
+  padding: 17px;
+}
+
+.planner-day-card h3 {
+  margin-bottom: 6px;
+}
+
+.planner-day-summary {
+  color: #756d78;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.planner-task {
+  border-top: 1px solid #eee7f5;
+  padding: 13px 0;
+}
+
+.planner-task:first-child {
+  border-top: 0;
+}
+
+.planner-task-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.planner-task-heading input {
+  margin-top: 4px;
+  accent-color: #8c78a5;
+}
+
+.planner-task-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.planner-task-piece {
+  display: block;
+  font-size: 12px;
+  color: #75618f;
+  margin-bottom: 5px;
+}
+
+.planner-task-goal {
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.planner-task-complete .planner-task-goal {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.planner-task-minutes {
+  font-size: 12px;
+  color: #756d78;
+  margin: 7px 0 0 25px;
+}
+
+.planner-task-actions {
+  display: flex;
+  gap: 8px;
+  margin: 9px 0 0 25px;
+}
+
+.planner-task-button {
+  font-size: 11px;
+  padding: 6px 9px;
+  background: #eee7f5;
+  color: #59466f;
+}
+
+.planner-empty-day {
+  font-size: 12px;
+  color: #938a98;
+  line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+  .planner-progress,
+  .planner-form-card,
+  .planner-day-card {
+    padding: 15px;
+  }
+
+  .planner-section h2 {
+    font-size: 26px;
+  }
+}
+
+/* Make the practice calendar smaller */
+
+#practice-calendar {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#practice-calendar h2 {
+  font-size: 25px;
+}
+
+#practice-calendar > p:not(.small-title):not(.save-note) {
+  font-size: 13px;
+}
+
+#practice-calendar .calendar {
+  padding: 12px;
+}
+
+#practice-calendar .calendar-header {
+  gap: 8px;
+}
+
+#practice-calendar .calendar-header h3 {
+  font-size: 16px;
+}
+
+#practice-calendar .calendar-grid {
+  gap: 4px;
+}
+
+#practice-calendar .calendar-grid > * {
+  min-width: 0;
+  padding: 5px 1px;
+  font-size: 12px;
+}
+
+#practice-calendar .selected-day {
+  padding: 12px;
+}
+
+#practice-calendar .selected-day h3 {
+  font-size: 17px;
+}
+
+#practice-calendar button {
+  font-size: 12px;
+  padding: 7px 10px;
+}
+
+#practice-calendar #clear-practice {
+  margin-top: 8px;
+}
+
+#calendar-summary {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* UNLOCKABLE MUSICAL BADGES */
+
+.badge-collection {
+  margin: 25px 0;
+  padding: 22px;
+  border: 1px solid #e8e0d5;
+  border-radius: 18px;
+  background: #fffdf9;
+  color: #403747;
+}
+
+.badge-collection h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 23px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.badge-collection-intro,
+#badge-unlock-message {
+  color: #756d78;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.unlockable-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.musical-badge {
+  text-align: center;
+  padding: 15px 9px;
+  border-radius: 14px;
+  border: 1px solid #e8e0d5;
+  background: #fff;
+  min-width: 0;
+}
+
+.musical-badge.locked {
+  filter: grayscale(1);
+  opacity: 0.55;
+  background: #f5f2f5;
+}
+
+.musical-badge.unlocked {
+  border-color: #d6c3e5;
+  background: #f4eef9;
+}
+
+.musical-badge-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.musical-badge h4 {
+  font-size: 13px;
+  margin: 4px 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.musical-badge p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #756d78;
+  margin: 0;
+}
+
+.musical-badge-status {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.musical-badge.unlocked .musical-badge-status {
+  color: #71558d;
+}
+
+@media (max-width: 400px) {
+  .badge-collection {
+    padding: 14px;
+  }
+
+  .unlockable-badges {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* PIANO JOURNAL */
+
+.piano-journal {
+  max-width: 760px;
+  margin: 40px auto;
+  color: #403747;
+}
+
+.piano-journal h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+.journal-intro {
+  color: #756d78;
+  line-height: 1.6;
+}
+
+.piano-journal-card,
+.piano-journal-entry {
+  background: #fffdf9;
+  border: 1px solid #e8e0d5;
+  border-radius: 16px;
+  padding: 22px;
+  margin: 18px 0;
+}
+
+.piano-journal-card h3,
+.piano-journal-entries-heading h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: normal;
+}
+
+#piano-journal-form label {
+  display: block;
+  font-size: 12px;
+  color: #756d78;
+  margin: 14px 0 6px;
+}
+
+#piano-journal-form input,
+#piano-journal-form select,
+#piano-journal-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d9cde2;
+  border-radius: 9px;
+  background: #fff;
+  color: #403747;
+  font: inherit;
+}
+
+#piano-journal-form textarea {
+  resize: vertical;
+}
+
+#piano-journal-save,
+#piano-journal-cancel,
+.piano-journal-entry button {
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 13px;
+  margin: 12px 8px 0 0;
+  background: #8c78a5;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+#piano-journal-cancel,
+.piano-journal-entry button {
+  background: #eee7f5;
+  color: #59466f;
+}
+
+#piano-journal-message,
+#piano-journal-count,
+#piano-journal-empty {
+  color: #756d78;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.piano-journal-entries-heading {
+  margin-top: 30px;
+}
+
+.piano-journal-entry {
+  overflow-wrap: anywhere;
+}
+
+.piano-journal-entry h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 19px;
+  font-weight: normal;
+  margin: 6px 0;
+}
+
+.piano-journal-entry-date {
+  color: #80669e;
+  font-size: 12px;
+}
+
+.piano-journal-entry-mood {
+  font-size: 13px;
+  color: #756d78;
+}
+
+.piano-journal-entry h5 {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.piano-journal-entry p {
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.piano-journal-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+@media (max-width: 500px) {
+  .piano-journal-card,
+  .piano-journal-entry {
+    padding: 15px;
+  }
+
+  .piano-journal h2 {
+    font-size: 26px;
+  }
+}
+
+/* Compact Piano Journal entries */
+
+.piano-journal-entry {
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+}
+
+.piano-journal-entry h4 {
+  font-size: 16px;
+  margin: 3px 0;
+}
+
+.piano-journal-entry-date,
+.piano-journal-entry-mood {
+  font-size: 11px;
+}
+
+.piano-journal-entry h5 {
+  font-size: 11px;
+  margin: 8px 0 2px;
+}
+
+.piano-journal-entry p {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 3px 0;
+}
+
+.piano-journal-entry button {
+  padding: 6px 9px;
+  margin-top: 8px;
+  font-size: 11px;
+}
